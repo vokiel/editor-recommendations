@@ -1,12 +1,25 @@
-.navbar:not(.navbar-fixed-top){
+.navbar:not(.navbar-fixed-top) {
   margin-bottom: 0;
 }
 body {
   line-height: 1.8;
 }
 
-body footer *
-{
+/* Improves readability by constraining text's width */
+body > .content {
+  max-width: 900px;
+  text-align: justify;
+}
+.content p, .content li {
+  max-width: 700px;
+}
+
+/* Prevents line break inside references */
+.content sup {
+  white-space: nowrap;
+}
+
+body footer * {
   /* Reset line-height for navbar and footer */
   line-height: 1.42857143;
 }

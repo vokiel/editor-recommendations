@@ -8,11 +8,10 @@ layout: default
 ---
 
 {% capture description %}
-This use case includes instant messages, e-mails and posts on online forums addressed to one or more recipients. Such messages usually follow the common letter writing conventions <sup>[[1](#ref1)]</sup>- they start with opening salutations (<i>Dear John</i>, <i>Hello</i>, etc.) and finish with complimentary closing (<i>Best regards</i>, <i>Best wishes</i>, etc.) and the signature of the author.
 
+This use case includes instant messages, e-mails and posts on online forums addressed to one or more recipients. Such messages usually follow the common letter writing conventions<sup>[[1](#ref1)]</sup> &mdash; they start with an opening salutation (<i>Dear John</i>, <i>Hello</i>, etc.) and finish with a complimentary closing (<i>Best regards</i>, <i>Best wishes</i>, etc.) and the signature of the author.
 
 {% endcapture %}
-
 
 {% capture features %}
 
@@ -21,11 +20,10 @@ This use case includes instant messages, e-mails and posts on online forums addr
 * [Italic]({{ site.baseurl }}/features/italic.html)
 * [Strikethrough]({{ site.baseurl }}/features/strikethrough.html)
 * [Image]({{ site.baseurl }}/features/image.html)
-* Quote
+* [Quote]({{ site.baseurl}}/features/quote.html)
 * [Bulleted List]({{ site.baseurl }}/features/bulleted-list.html)
 * [Numbered List]({{ site.baseurl }}/features/numbered-list.html)
 * Emoticons/Emojis
-
 
 {% endcapture %}
 
@@ -35,7 +33,7 @@ This use case includes instant messages, e-mails and posts on online forums addr
 
 {% capture notes %}
 
-* Some private messages might require a subject line, however that is environment specific. However it’s good to note that the subject line should be summarising the content of the message accurately.
+* Some private messages might require a subject line; this is, however, environment-specific. The subject line is intended to accurately summarise the content of the message.
 
 {% endcapture %}
 

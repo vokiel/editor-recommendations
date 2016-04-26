@@ -1,0 +1,12 @@
+{% comment %} Apparently increment does not work here… {% endcomment %}
+{% if figureCount == null %}
+    {% assign figureCount = 1 %}
+{% else %}
+	{% assign figureCount = figureCount | plus: 1 %}
+{% endif %}
+<figure class="thumbnail">
+	<a href="{{ site.baseurl }}/images/{% if include.full %}{{ include.full }}{% else %}{{ include.src }}{% endif %}" title="Click to open image in full size">
+		<img src="{{ site.baseurl }}/images/{{ include.src }}" alt="{{ include.alt }}" class="img-responsive">
+	</a>
+	<figcaption class="caption"><a href="#fig-ref{{ figureCount }}"><b>Fig. {{ figureCount }}:</b></a> {{ include.caption }}</figcaption>
+</figure>

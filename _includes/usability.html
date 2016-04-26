@@ -1,32 +1,46 @@
-<div class="page-header">
-    <h1>{{ page.usability.title }} 
-        <span class="small"> // usability {{ page.usability.status | downcase }} 
-            <a href="{{ page.usability.discussion }}" title="Public discussion">
-                <i class="glyphicon glyphicon-bullhorn" aria-hidden="true"></i>
-                <span class="sr-only">Public discussion</span>
-            </a>
-        </span>
-    </h1>
-</div>
+{% include page-header.html title=page.usability.title type="usability" status=page.usability.status discussion=page.usability.discussion %}
 
 <div class="row">
-    <div class="col-md-10">
+    <div class="col-md-9">
+        <h2>Description</h2>
+
         {{ description | markdownify }}
+
+        {% if expectations %}
+
+        <h2>User Expectations and Popular Behavior</h2>
+
+        {{ expectations | markdownify }}
+
+        {% endif %}
+
+        {{ recommendations | markdownify }}
+
+        {% if notes %}
+
+        <h2>Notes</h2>
+
+        {{ notes | markdownify }}
+
+        {% endif %}
+
+        {% if figures %}
+
+        <h2>Sources of Figures</h2>
+
+        {{ figures | markdownify }}
+
+        {% endif %}
+
+        {% if references %}
+
+        <h2>References</h2>
+
+        {{ references | markdownify }}
+
+        {% endif %}
     </div>
-    <div class="col-md-2">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">Usability</h3>
-            </div>
-            <div class="list-group">
-                {% for usabilityPage in site.usability %}
-                    {% assign className = 'list-group-item' %}
-                    {% if usabilityPage.usability.title == page.usability.title %}
-                        {% assign className = 'list-group-item active' %}
-                    {% endif %}
-                    <a href="{{ site.baseurl }}{{ usabilityPage.url }}" class="{{ className }}">{{ usabilityPage.usability.title }}</a>
-                {% endfor %}
-            </div>
-        </div>
+    <div class="col-md-3">
+        {% include type-links.html type="Usability" items=site.usability %}
     </div>
 </div>
